@@ -17,37 +17,31 @@
 
 ## Model Architecture
 
-- **ResNet50 (Feature Extractor)**:  
-  - Pre-trained on ImageNet.  
-  - Used as a feature extractor by removing the top fully connected layers.
+```
+              OPERATION        DATA DIMENSIONS   WEIGHTS(N)   WEIGHTS(%)
 
-- **Convolutional Layer 1**:  
-  - 512 filters, 3x3 kernel.  
-  - ReLU activation function.
-
-- **Max Pooling Layer 1**:  
-  - 2x2 pool size to reduce feature map size.
-
-- **Convolutional Layer 2**:  
-  - 128 filters, 3x3 kernel.  
-  - ReLU activation function.
-
-- **Max Pooling Layer 2**:  
-  - 2x2 pool size to reduce feature map size.
-
-- **Flatten Layer**:  
-  - Converts 2D feature maps into a 1D vector.
-
-- **Dense Layer 1**:  
-  - 32 neurons.  
-  - ReLU activation function.
-
-- **Dropout Layer**:  
-  - Drop 40% of neurons to prevent overfitting.
-
-- **Dense Layer 2 (Output Layer)**:  
-  - 2 neurons (for cats and dogs).  
-  - Softmax activation function.
+              Input   #####       3  224  224
+         InputLayer     |      ----------------          0         0.0%
+                      #####       3  224  224
+      ResNet50 (Base)  \|/     ----------------    2359808         1.7%
+               -      #####     512  224  224
+       MaxPooling2D   Y max    ----------------          0         0.0%
+                      #####     512  112  112
+      Convolution2D    \|/     ----------------     147584         0.1%
+               relu   #####     128  112  112
+       MaxPooling2D   Y max    ----------------          0         0.0%
+                      #####     128   56   56
+           Flatten    |||||    ----------------          0         0.0%
+                      #####         50176
+              Dense   XXXXX    ----------------    1605696        74.3%
+               relu   #####          32
+           Dropout    |||||    ----------------          0         0.0%
+                      #####          32
+              Dense   XXXXX    ----------------         64         2.8%
+               relu   #####           2
+              Dense   XXXXX    ----------------         64         2.8%
+            softmax   #####           2
+```
 
 ## Conclusion
 

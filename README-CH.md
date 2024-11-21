@@ -15,37 +15,31 @@
 
 ## Model Architecture
 
-- **ResNet50（Feature Extractor）**：  
-  - 預訓練於 ImageNet。  
-  - 透過去除頂層全連接層，作為特徵提取器使用。
+```
+              OPERATION        DATA DIMENSIONS   WEIGHTS(N)   WEIGHTS(%)
 
-- **Convolutional Layer 1**:  
-  - 512 個濾波器，3x3 核心。  
-  - ReLU 激活函數。
-
-- **Max Pooling Layer 1**:  
-  - 2x2 池化大小，用於減少特徵圖大小。
-
-- **Convolutional Layer 2**:  
-  - 128 個濾波器，3x3 核心。  
-  - ReLU 激活函數。
-
-- **Max Pooling Layer 2**:  
-  - 2x2 池化大小，用於減少特徵圖大小。
-
-- **Flatten Layer**:  
-  - 將 2D 特徵圖轉換為 1D 向量。
-
-- **Dense Layer 1**:  
-  - 32 個神經元。  
-  - ReLU 激活函數。
-
-- **Dropout Layer**:  
-  - 丟棄 40% 的神經元，以防止過擬合。
-
-- **Dense Layer 2 (Output Layer)**:  
-  - 2 個神經元（分別對應貓和狗）。  
-  - Softmax 激活函數。
+              Input   #####       3  224  224
+         InputLayer     |      ----------------          0         0.0%
+                      #####       3  224  224
+      ResNet50 (Base)  \|/     ----------------    2359808         1.7%
+               -      #####     512  224  224
+       MaxPooling2D   Y max    ----------------          0         0.0%
+                      #####     512  112  112
+      Convolution2D    \|/     ----------------     147584         0.1%
+               relu   #####     128  112  112
+       MaxPooling2D   Y max    ----------------          0         0.0%
+                      #####     128   56   56
+           Flatten    |||||    ----------------          0         0.0%
+                      #####         50176
+              Dense   XXXXX    ----------------    1605696        74.3%
+               relu   #####          32
+           Dropout    |||||    ----------------          0         0.0%
+                      #####          32
+              Dense   XXXXX    ----------------         64         2.8%
+               relu   #####           2
+              Dense   XXXXX    ----------------         64         2.8%
+            softmax   #####           2
+```
 
 ## Conclusion
 
