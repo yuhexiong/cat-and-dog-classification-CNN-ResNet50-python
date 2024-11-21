@@ -1,5 +1,7 @@
 # Cat and Dog CNN with ResNet50
 
+**(also provided Traditional Chinese version document [README-CH.md](README-CH.md).)**
+
 ### DataSet From [Kaggle - Cat and Dog](https://www.kaggle.com/datasets/tongpython/cat-and-dog)  
 
 **Note**: dataset is too large to be included directly. Please download it yourself from the provided Kaggle link.
@@ -12,9 +14,6 @@
 - Loss Function: Cross Entropy
 - Optimizer: Adam, Learning Rate = 0.0001
 - data augmentation to reduce overfitting
-
-Here’s a simplified, bullet-point version of the model architecture explanation:
-
 
 ## Model Architecture
 
