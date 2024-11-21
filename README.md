@@ -14,13 +14,13 @@ Data set is too large, please download it yourself.
 
 ## Loss and Accuracy
 
-![image](https://github.com/yuhexiong/cat-and-dog-classification-CNN-ResNet50-python/blob/main/image/loss.png)
+![image](./image/loss.png)
 
-![image](https://github.com/yuhexiong/cat-and-dog-classification-CNN-ResNet50-python/blob/main/image/accuracy.png)
+![image](./image/accuracy.png)
 
 
 ## Confusion Matrix - Accuracy Rate 97.53%
 
-![image](https://github.com/yuhexiong/cat-and-dog-classification-CNN-ResNet50-python/blob/main/image/confusion_matrix.png)
+![image](./image/confusion_matrix.png)
 
 
