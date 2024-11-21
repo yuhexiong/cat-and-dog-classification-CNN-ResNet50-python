@@ -1,10 +1,10 @@
 # Cat and Dog CNN with ResNet50
 
 ### 資料集來源：[Kaggle - Cat and Dog](https://www.kaggle.com/datasets/tongpython/cat-and-dog)
+**注意**：由於資料集過大，無法直接包含在此。請從提供的 Kaggle 連結自行下載。
 
 使用 ResNet50 再自行疊加其他神經網路層，將貓咪與狗的圖片進行分類，最後倒出 2 個神經元，分別代表貓狗。  
 
-**注意**：由於資料集過大，無法直接包含在此。請從提供的 Kaggle 連結自行下載。
 
 ## Overview
 

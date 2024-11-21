@@ -1,11 +1,11 @@
 # Cat and Dog CNN with ResNet50
 
+### DataSet From [Kaggle - Cat and Dog](https://www.kaggle.com/datasets/tongpython/cat-and-dog)  
+**Note**: dataset is too large to be included directly. Please download it yourself from the provided Kaggle link.
+
 **(also provided Traditional Chinese version document [README-CH.md](README-CH.md).)**
 
-### DataSet From [Kaggle - Cat and Dog](https://www.kaggle.com/datasets/tongpython/cat-and-dog)  
-
 Using ResNet50 as a feature extractor and adding additional neural network layers, the model classifies images of cats and dogs, with the final output consisting of 2 neurons representing the cat and dog classes.  
-**Note**: dataset is too large to be included directly. Please download it yourself from the provided Kaggle link.
 
 ## Overview
 
