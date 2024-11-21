@@ -4,6 +4,7 @@
 
 ### DataSet From [Kaggle - Cat and Dog](https://www.kaggle.com/datasets/tongpython/cat-and-dog)  
 
+Using ResNet50 as a feature extractor and adding additional neural network layers, the model classifies images of cats and dogs, with the final output consisting of 2 neurons representing the cat and dog classes.  
 **Note**: dataset is too large to be included directly. Please download it yourself from the provided Kaggle link.
 
 ## Overview
@@ -11,11 +12,10 @@
 - Language: Python v3.10.12
 - Package: Tensorflow
 - Model: CNN(ResNet50)
-- Loss Function: Cross Entropy
-- Optimizer: Adam, Learning Rate = 0.0001
-- data augmentation to reduce overfitting
 
 ## Model Architecture
+
+The model uses **Cross Entropy** as the loss function, **Adam** optimizer with a learning rate of **0.0001**, and applies **data augmentation** to reduce overfitting by generating variations of the training images.
 
 ```
               OPERATION        DATA DIMENSIONS   WEIGHTS(N)   WEIGHTS(%)
